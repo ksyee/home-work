@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+}
+
+.arrow {
+  color: #fff;
+}
+
+.card-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  width: 502px;
+  margin: 40px auto 0;
+}
+
+.card {
+  position: relative;
+  height: 310px;
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+}
+
+.card:hover {
+  border: 1px solid #0084e9;
+}
+
+.card .link,
+.card .link-hover {
+  position: absolute;
+  top: 248px;
+  left: 20px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.card .link {
+  width: 42px;
+  background: #c5c5c5 url(../images/angle-right.svg) no-repeat center center;
+}
+
+.card .link-hover {
+  width: 112px;
+  font-size: 14px;
+}
+
+.card .link-hover .text {
+  color: #fff;
+}
+
+.card .link-hover .text::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 10px;
+  margin-left: 16px;
+  background: url(../images/angle-right.svg) no-repeat;
+}
+
+.card .link:hover {
+  display: none;
+}
+
+.card .link:hover + .link-hover {
+  display: block;
+}
+
+.card .link-hover {
+  display: none;
+  background-color: #0084e9;
+}
+
+.card .link-hover:hover {
+  display: block;
+}
+
+.card .description {
+  text-align: center;
+}
+
+.card-md {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 502px;
+  margin-bottom: 16px;
+  padding: 20px 28px;
+}
+
+.card-md .description {
+  margin-bottom: 40px;
+}
+
+.card-md .prod-title {
+  width: 200px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 14px;
+}
+
+.card-sm {
+  width: 243px;
+  padding: 14px 21px;
+  text-align: center;
+}
+
+.card-sm + .card-sm {
+  margin-left: 16px;
+}
+
+.card-sm .prod-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.card-sm .description {
+  margin-bottom: 8px;
+}
