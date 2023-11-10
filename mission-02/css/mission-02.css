@@ -1,0 +1,329 @@
+/** common */
+body {
+  width: 100vw;
+  min-width: 380px;
+  height: 100%;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  white-space: nowrap;
+}
+
+/** header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+}
+
+.logo a {
+  display: flex;
+  gap: 6.6px;
+}
+
+/** main */
+.login {
+  position: relative;
+  height: calc(100vh - 50px);
+  padding: 70px 32px 0;
+  color: #fefefe;
+  background: linear-gradient(
+      180deg,
+      rgba(51, 47, 43, 0.4) 38.26%,
+      rgba(50, 46, 42, 0.1) 89.14%
+    ),
+    url(../images/coffee_bg.png) no-repeat 25% 80% / cover,
+    lightgray 4.488px -1.18px / 149.578% 100.145% no-repeat;
+}
+
+.text-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 114px;
+}
+
+.text-wrap .title {
+  margin-bottom: 24px;
+  font-size: 36px;
+  line-height: normal;
+  font-weight: 300;
+}
+
+.text-wrap .text1 {
+  font-size: 18px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.text-wrap .text2 {
+  font-size: 12px;
+}
+
+/* .login-form */
+.login-form {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+input {
+  outline: none;
+}
+
+/* email */
+.input-email {
+  position: relative;
+  height: 48px;
+  display: flex;
+  align-items: end;
+}
+
+.is-active {
+  outline: 3px solid #333e89;
+  border-radius: 2px;
+}
+
+.input-email label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.input-email input[type='email'] {
+  width: 100%;
+  padding: 2px 8px;
+  font-size: 16px;
+  color: #fefefe;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #fefefe;
+  border-radius: none;
+}
+
+.input-email input[type='email']::placeholder {
+  color: rgba(254, 254, 254, 0.7);
+}
+
+.input-email .icon {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+.input-email.success .icon.checked-icon {
+  display: block;
+  background: url(../images/check_icon.svg) no-repeat center center;
+}
+
+.input-email.error .icon.checked-icon {
+  display: block;
+  background: url(../images/warning_icon.svg) no-repeat center center;
+}
+
+.input-email .notification {
+  position: absolute;
+  left: 8px;
+  bottom: -20px;
+  display: none;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.input-email.error .notification {
+  display: block;
+}
+
+/* password */
+.input-pwd {
+  position: relative;
+  display: flex;
+  height: 48px;
+  margin-top: 52px;
+  align-items: end;
+}
+
+.input-pwd label {
+  position: absolute;
+  top: calc(100% - 28px);
+  left: 8px;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-pwd label.focus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 13px;
+}
+
+.input-pwd input[type='password'],
+.input-pwd input[type='text'] {
+  width: 100%;
+  padding: 2px 8px;
+  font-size: 18px;
+  color: #fefefe;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #fefefe;
+  border-radius: none;
+}
+
+.input-pwd .icon-wrap {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.input-pwd .icon-wrap * {
+  width: 16px;
+  height: 16px;
+}
+
+.input-pwd .icon.checked-icon {
+  display: none;
+}
+
+.input-pwd.success .icon.checked-icon {
+  display: block;
+  background: url(../images/check_icon.svg) no-repeat center center;
+}
+
+.input-pwd.error .icon.checked-icon {
+  display: block;
+  background: url(../images/warning_icon.svg);
+}
+
+.input-pwd .visible-btn {
+  right: 30px;
+  display: block;
+  background: url(../images/visible_icon.svg) no-repeat center center;
+}
+
+.input-pwd .visible-btn.is-active {
+  background: url(../images/hidden_icon.svg);
+}
+
+.input-pwd .notification {
+  position: absolute;
+  left: 8px;
+  bottom: -20px;
+  display: none;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.input-pwd.error .notification {
+  display: block;
+}
+
+/* store email */
+.store-email {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 2px;
+  margin-top: 17px;
+}
+
+.store-email .check-box {
+  position: absolute;
+  top: 2px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/unchecked.svg);
+}
+
+.store-email input[type='checkbox']:checked + .check-box {
+  background: url(../images/checked.svg);
+}
+
+.store-email label {
+  order: 2;
+  font-size: 12px;
+  padding-left: 20px;
+  z-index: 1;
+  user-select: none;
+}
+
+.btn-wrap {
+  container-type: inline-size;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
+  margin-top: 120px;
+}
+
+.btn-wrap button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 200px;
+  max-width: 311px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.btn-wrap button span {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  opacity: 1;
+}
+
+.btn-wrap .arrow {
+  position: absolute;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/arrow_btn.svg);
+}
+
+.sign-in-btn {
+  color: #d2c9b6;
+  background-color: #fefefe;
+  opacity: 0.8;
+}
+
+.sign-in-btn.normal {
+  color: #24388d;
+  opacity: 1;
+}
+
+.sign-in-btn.disabled .arrow {
+  background: url(../images/arrow_btn_disabled.svg);
+}
+
+.sign-in-btn.normal .arrow {
+  background: url(../images/arrow_btn_normal.svg);
+}
+
+.sign-up-btn {
+  border: 1px solid #f5f5f5;
+}
+
+@media screen and (min-width: 600px) {
+  .btn-wrap {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}
