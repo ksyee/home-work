@@ -1,0 +1,87 @@
+.input-email {
+  width: clamp(245px, 100%, 500px);
+  height: 40px;
+  padding: 0 10px;
+  font-size: 14px;
+  border: 0;
+  border-radius: 30px;
+}
+
+/* select */
+/* 기본 스타일 초기화 */
+/* Firefox */
+select {
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+select::-ms-expand {
+  display: none;
+}
+
+/* Chrome, Safari, Opera */
+select::-webkit-scrollbar {
+  display: none;
+}
+
+.language:focus {
+  outline: 3px solid var(--green-400, #58e590);
+}
+
+.language-wrapper {
+  position: relative;
+  display: block;
+  width: 110px;
+  height: 30px;
+}
+
+.language-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  background: url(/mission-03/images/language_icon.svg) no-repeat;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.language {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--gray-500, #757575);
+  background: transparent;
+  border: 1px solid var(--gray-500, #757575);
+  border-radius: 2px;
+}
+
+.drop-down-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  background: url(/mission-03/images/drop_down_icon.svg);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .input-email {
+    height: 60px;
+    padding: 0 20px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .language-wrapper {
+    height: 40px;
+  }
+}

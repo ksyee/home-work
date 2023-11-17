@@ -1,0 +1,89 @@
+.bg-wrap {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
+    url(/mission-03/images/bg_1.png) center 5%;
+}
+
+/* main */
+.main {
+  background-color: var(--black, #010101);
+  border-bottom: 4px solid var(--gray-800, #2f2f2f);
+}
+
+/* promotion */
+.promotion {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  row-gap: 24px;
+  max-width: 1280px;
+  padding: 68px 18px 70px;
+  margin: 0 auto;
+  color: var(--white, #fff);
+  text-align: center;
+}
+
+.promotion-title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.promotion-text-1 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 40px;
+}
+
+.promotion-text-2 {
+  font-size: 14px;
+}
+
+.promotion-text-3 {
+  font-size: 12px;
+}
+
+/* form */
+.form-inner {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  row-gap: 12px;
+  margin: 0 47px;
+}
+
+@media (min-width: 768px) {
+  .bg-wrap {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, #000 100%),
+      url('/mission-03/images/bg_2.png') center 5% / cover no-repeat;
+  }
+
+  .main {
+    background: transparent;
+  }
+
+  .promotion {
+    row-gap: 28px;
+  }
+
+  .promotion-title {
+    font-size: 60px;
+  }
+
+  .promotion-text-1 {
+    font-size: 20px;
+  }
+
+  .promotion-text-2 {
+    font-size: 16px;
+  }
+
+  .promotion-text-3 {
+    font-size: 16px;
+  }
+
+  .form-inner {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}
