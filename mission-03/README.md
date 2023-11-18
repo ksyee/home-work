@@ -34,4 +34,18 @@
 ![Alt text](./readme-images/form.png)
 
 > footer 요소는 footer-inner 요소가 내부 요소들을 다 감싸고 있음.
-> footer-inner
+> contact-us 요소의 전화번호는 클릭 시 전화 연결되도록 tel: 속성을 사용.
+
+![Alt text](./readme-images/tel.png)
+
+> footer-navigation 요소는 ul 요소를 감싸고 있고 ul 요소 내부 li요소 안에는 a 요소가 있음.
+> footer-navigation 요소는 grid를 이용하여 모바일 화면에서는 2열, 데스크탑 화면에서는 4열로 배치.
+> address.corporation-info 요소의 전화번호, 메일, 사업자등록번호는 클릭이나 터치 시 해당 링크로 이동되도록 a 요소로 감싸줌.
+
+![Alt text](./readme-images/corporation-info.png)
+
+### 생각해볼 점
+
+- header 와 main을 div 태그로 묶어서 배경을 적용하는 것이 좋은 방법인지?
+- select 요소의 appearance 속성을 none으로 설정하여 브라우저의 기본 스타일을 제거하는 것이 좋은 방법인지?
+- 작성한 코드의 접근성은 어떤지?
